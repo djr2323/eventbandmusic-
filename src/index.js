@@ -8,6 +8,10 @@ const route = require('./routes');
 
 const port = 3300;
 
+app.use(express.static(path.join(__dirname,'css')));
+app.use(express.static(path.join(__dirname,'img')));
+app.use(express.static(path.join(__dirname,'asset')));
+
 app.use(express.urlencoded({
     extended: true
 }))
@@ -15,6 +19,7 @@ app.use(express.urlencoded({
 app.engine('hbs',handleBars({
     extname:'hbs'
 }))
+
 
 app.set('view engine','hbs');
 app.set('views',path.join(__dirname,'resource/views'));
