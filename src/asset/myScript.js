@@ -45,6 +45,10 @@
         })
     }
 
+
+alertBuyticket = ()=>{
+    window.alert("mua thanh cong")
+}
 /* slide show */
 
 showSlide = (n)=>{

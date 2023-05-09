@@ -5,6 +5,7 @@ const handleBars = require('express-handlebars').engine;
 const app = express();
 
 const route = require('./routes');
+const db = require('./config/db')
 
 const port = 3300;
 
@@ -21,11 +22,15 @@ app.engine('hbs',handleBars({
 }))
 
 
+
+
 app.set('view engine','hbs');
 app.set('views',path.join(__dirname,'resource/views'));
 
 app.use(express.json());
 app.use(morgan('combined'))
+
+db.connect();
 
 route(app);
 
