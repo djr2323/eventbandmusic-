@@ -1,0 +1,89 @@
+<div class="mt-4">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">quantity</th>
+        <th scope="col">email</th>
+        <th scope="col">time buy</th>
+        <th scope="col">Price</th>
+        <th></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {{#each ticket}}
+        <tr>
+          <th scope="row">{{inc @index}}</th>
+          <td>{{this.quantity}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.createdAt}}</td>
+          <td>{{price this.quantity}}</td>
+          <td><a
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-id="{{this._id}}"
+              data-bs-target="#exampleModal"
+              href=""
+            >xóa</a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Thông báo</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h1>
+          Xác nhận xóa
+        </h1>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >Close</button>
+        <button
+          id="btn-del-course"
+          type="button"
+          class="btn btn-success"
+        >Accept</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<form method="POST" name="delete-course-form">
+</form>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function(){ var ticketId; var
+  deleteForm = document.forms['delete-course-form'];
+  $('#exampleModal').on('show.bs.modal', function(e){ var button
+  =$(e.relatedTarget); ticketId = button.data('id'); }); 
+  var btnDeleteCourse = document.getElementById('btn-del-course') 
+  btnDeleteCourse.onclick = function(){
+  deleteForm.action='/tickets/'+ticketId+'?_method=DELETE';
+  deleteForm.submit(); } })
+
+</script>

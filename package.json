@@ -22,8 +22,12 @@
   },
   "homepage": "https://github.com/djr2323/eventbandmusic#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
+    "jsonwebtoken": "^9.0.0",
+    "method-override": "^3.0.0",
     "mongoose": "^7.1.0"
   },
   "devDependencies": {

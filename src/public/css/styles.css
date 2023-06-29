@@ -188,21 +188,21 @@ html{
     position: relative;
     padding-top: 50%;
     z-index: -1;
-    background: url('slider/ss1.png') top center / cover no-repeat;
+    background: url('/img/slider/ss1.png') top center / cover no-repeat;
 }
 .slider #slider2 {
     margin-top: 46px;
     position: relative;
     padding-top: 50%;
     z-index: -1;
-    background: url('slider/ss2.jpg') top center / cover no-repeat;
+    background: url('/img/slider/ss2.jpg') top center / cover no-repeat;
 }
 .slider #slider3 {
     margin-top: 46px;
     position: relative;
     padding-top: 50%;
     z-index: -1;
-    background: url('slider/ss3.jpg') top center / cover no-repeat;
+    background: url('/img/slider/ss3.jpg') top center / cover no-repeat;
 }
 #slider1 .text-content,
 #slider2 .text-content,
@@ -380,7 +380,7 @@ header.modal-header{
     top: 0;
     right: 0;
     padding:16px;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     opacity: 0.8;
 }

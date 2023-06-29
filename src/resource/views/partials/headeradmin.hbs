@@ -1,35 +1,40 @@
-<div id="header" class="js-header">
 
-        <div class="grid wide">
-            <div class="header--title">
-                <img src="logo/SpaceSpeakerslogo.png" alt="">
-                <h1>SpaceSpeaker</h1>
-            </div>
-            <div>
-                <ul id="nav">
-                    <li><a href="/">Home</a></li>
-                    <span class="seperate"></span>
-                    <li><a href="#band">Band</a></li>
-                    <span class="seperate"></span>
-                    <li><a href="#tour">Tour</a></li>
-                    <span class="seperate"></span>
-                    <li><a href="#contact">Contact</a></li>
-                    <span class="seperate"></span>
-                    <li>
-                        <a href="/login">
-                            Login
-                        </a>
-                    </li>
-                    
-                </ul>
-                <div class="menu-btn js-menu">
-                    <i class="ti-menu menu-icon"></i>
-                </div>
-                <div class="search-btn">
-                    <i class="ti-search search-icon"></i>
-                </div>
-            </div>
-        </div>
-                
-                
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand" href="/admin">ADMIN</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse d-flex flex-row-reverse"
+      id="navbarNavDropdown"
+    >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {{mydata.username}}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/tickets/show">Quản lý vé</a></li>
+            <div class="dropdown-divider"></div>
+            <li><a class="dropdown-item" href="/">Đăng xuất</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
